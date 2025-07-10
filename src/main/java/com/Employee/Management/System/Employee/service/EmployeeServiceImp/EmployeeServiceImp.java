@@ -9,6 +9,8 @@ import com.Employee.Management.System.Employee.service.EmployeeService;
 import lombok.AllArgsConstructor;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
+
 @Service
 @AllArgsConstructor
 
@@ -29,5 +31,11 @@ public class EmployeeServiceImp implements EmployeeService {
     Employee employee = employeeRepository.findById(id)
             .orElseThrow(()->new ResourceNotFoudException("Employee is not exists by given ID "+ id));
     return employeeMapper.mapToEmployeeDto(employee);
+    }
+
+    @Override
+    public List<EmployeeDTO> getEmployees(){
+        List<Employee> employee = employeeRepository.findAll();
+        return employee.stream().map(employeeMapper::mapToEmployeeDto).toList();
     }
 }
