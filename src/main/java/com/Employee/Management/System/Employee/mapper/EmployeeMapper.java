@@ -5,7 +5,7 @@ import com.Employee.Management.System.Employee.entity.Employee;
 
 public class EmployeeMapper {
 
-    public static EmployeeDTO mapToEmployeeDto(Employee employee){
+    public EmployeeDTO mapToEmployeeDto(Employee employee){
         return new EmployeeDTO(
                 employee.getId(),
                 employee.getFirstName(),
@@ -14,7 +14,7 @@ public class EmployeeMapper {
         );
     }
 
-    public static Employee mapToEmployee(EmployeeDTO employeeDTO){
+    public Employee mapToEmployee(EmployeeDTO employeeDTO){
         return new Employee(
                 employeeDTO.getId(),
                 employeeDTO.getFirstName(),
