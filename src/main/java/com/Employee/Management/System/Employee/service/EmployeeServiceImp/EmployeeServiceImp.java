@@ -50,4 +50,11 @@ public class EmployeeServiceImp implements EmployeeService {
 
         return employeeMapper.mapToEmployeeDto(employee);
     }
+
+    public String deleteEmployee(Long id){
+        Employee employee = employeeRepository.findById(id)
+                .orElseThrow(()->new ResourceNotFoudException("Employee is not exists by give id : "+id));
+        employeeRepository.delete(employee);
+        return "Employee is deleted from id : "+id;
+    }
 }
