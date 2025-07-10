@@ -5,4 +5,6 @@ import com.Employee.Management.System.Employee.dto.EmployeeDTO;
 public interface EmployeeService {
 
     EmployeeDTO createEmployee(EmployeeDTO employeeDTO);
+    EmployeeDTO getEmployeeById(Long id);
+
 }

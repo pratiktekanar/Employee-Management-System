@@ -2,7 +2,9 @@ package com.Employee.Management.System.Employee.mapper;
 
 import com.Employee.Management.System.Employee.dto.EmployeeDTO;
 import com.Employee.Management.System.Employee.entity.Employee;
+import org.springframework.stereotype.Component;
 
+@Component
 public class EmployeeMapper {
 
     public EmployeeDTO mapToEmployeeDto(Employee employee){
