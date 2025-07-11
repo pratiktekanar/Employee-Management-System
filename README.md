@@ -25,7 +25,7 @@ Employee-Management-System/
 ## 🧰 Technologies Used
 
 ### 🔧 Backend
-- Java 17+
+- Java 21+
 - Spring Boot
 - Spring Data JPA
 - MySQL
@@ -34,7 +34,7 @@ Employee-Management-System/
 ### 🎨 Frontend
 - HTML5
 - CSS3
-- Vanilla JavaScript
+- JavaScript
 
 ---
 
