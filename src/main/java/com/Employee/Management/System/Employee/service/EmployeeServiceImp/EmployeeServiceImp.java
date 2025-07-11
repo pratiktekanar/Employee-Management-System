@@ -1,4 +1,4 @@
-package com.Employee.Management.System.Employee.service.EmployeeServiceImp;
+package com.Employee.Management.System.Employee.service.employeeServiceImp;
 
 import com.Employee.Management.System.Employee.dto.EmployeeDTO;
 import com.Employee.Management.System.Employee.entity.Employee;
@@ -29,9 +29,9 @@ public class EmployeeServiceImp implements EmployeeService {
 
     @Override
     public EmployeeDTO getEmployeeById(Long id){
-    Employee employee = employeeRepository.findById(id)
-            .orElseThrow(()->new ResourceNotFoudException("Employee is not exists by given ID "+ id));
-    return employeeMapper.mapToEmployeeDto(employee);
+        Employee employee = employeeRepository.findById(id)
+                .orElseThrow(()->new ResourceNotFoudException("Employee is not exists by given ID "+ id));
+        return employeeMapper.mapToEmployeeDto(employee);
     }
 
     @Override
@@ -47,6 +47,7 @@ public class EmployeeServiceImp implements EmployeeService {
         employee.setFirstName(updatedEmployee.getFirstName());
         employee.setLastName(updatedEmployee.getLastName());
         employee.setEmail(updatedEmployee.getEmail());
+        employeeRepository.save(employee);
 
         return employeeMapper.mapToEmployeeDto(employee);
     }
