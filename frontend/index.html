@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Employee Management System</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="navbar">Employee Management System</div>
+
+  <div class="container">
+    <button onclick="showForm()">Add Employee</button>
+
+    <div id="formContainer" class="form-box" style="display: none;">
+      <h2 id="formTitle">Add Employee</h2>
+      <input type="text" id="firstName" placeholder="First Name" />
+      <input type="text" id="lastName" placeholder="Last Name" />
+      <input type="email" id="email" placeholder="Email" />
+      <button id="submitBtn" onclick="submitEmployee()">Submit</button>
+      <button onclick="cancelEdit()">Cancel</button>
+    </div>
+
+    <h2>List of Employees</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>First</th>
+          <th>Last</th>
+          <th>Email</th>
+          <th>Actions</th>
+        </tr>
+      </thead>
+      <tbody id="employeeTableBody"></tbody>
+    </table>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
