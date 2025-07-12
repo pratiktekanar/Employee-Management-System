@@ -1,6 +1,9 @@
-fetch("https://employee-management-system-toox.onrender.com/api/employees")
+// ✅ Declare this at the top
+const API_URL = "https://employee-management-system-toox.onrender.com/api/employees";
+
 let editingEmployeeId = null;
 
+// ✅ Call fetch on page load
 window.onload = fetchEmployees;
 
 function fetchEmployees() {
@@ -26,6 +29,7 @@ function fetchEmployees() {
       });
     });
 }
+
 
 function showForm() {
   document.getElementById("formContainer").style.display = "block";
