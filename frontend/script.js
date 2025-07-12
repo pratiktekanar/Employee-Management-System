@@ -1,4 +1,4 @@
-const API_URL = "http://localhost:8080/api/employees";
+fetch("https://employee-management-system-toox.onrender.com/api/employees")
 let editingEmployeeId = null;
 
 window.onload = fetchEmployees;

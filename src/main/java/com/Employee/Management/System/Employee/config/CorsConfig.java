@@ -7,17 +7,20 @@ import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 
 @Configuration
 public class CorsConfig {
-
     @Bean
     public WebMvcConfigurer corsConfigurer() {
         return new WebMvcConfigurer() {
             @Override
             public void addCorsMappings(CorsRegistry registry) {
-                registry.addMapping("/api/**") // match your controller endpoint
-                        .allowedOrigins("http://localhost:8081") // match your frontend address
+                registry.addMapping("/api/**")
+                        .allowedOrigins(
+                                "http://localhost:8081",
+                                "https://employee-management-system-jtwm.vercel.app"
+                        )
                         .allowedMethods("GET", "POST", "PUT", "DELETE")
                         .allowedHeaders("*");
             }
         };
     }
 }
+
