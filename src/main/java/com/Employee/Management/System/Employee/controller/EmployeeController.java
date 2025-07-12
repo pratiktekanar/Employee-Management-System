@@ -50,4 +50,10 @@ public class EmployeeController {
         return employeeService.deleteEmployee(id);
     }
 
+    @GetMapping("/")
+    public String welcome() {
+        return "✅ Employee Management API is running! Visit /api/employees";
+    }
+
+
 }
