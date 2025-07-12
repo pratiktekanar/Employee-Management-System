@@ -15,7 +15,7 @@ public class CorsConfig {
                 registry.addMapping("/api/**")
                         .allowedOrigins(
                                 "http://localhost:8081",
-                                "https://employee-management-system-jtwm.vercel.app"
+                                "https://pratik-employee-manager.vercel.app"
                         )
                         .allowedMethods("GET", "POST", "PUT", "DELETE")
                         .allowedHeaders("*");
